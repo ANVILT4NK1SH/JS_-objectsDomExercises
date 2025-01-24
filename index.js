@@ -26,23 +26,34 @@ const student = {
 };
 
 //Exercise 3
+const colorArray = ["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"]
 const btn = document.getElementById("btn");
 const bgColor = document.getElementById("bgColor");
 let i = 1;
+console.log(colorArray[Math.floor(Math.random() * 16)])
 btn.addEventListener("click", function () {
-	if (i === 0) {
-		bgColor.style.backgroundColor = "white";
-		i++;
-	} else if (i === 1) {
-		bgColor.style.backgroundColor = "red";
-		i++;
-	} else if (i === 2) {
-		bgColor.style.backgroundColor = "blue";
-		i++;
-	} else {
-		bgColor.style.backgroundColor = "yellow";
-		i = 0;
-	}
+  const hexCode = `#${colorArray[Math.floor(Math.random() * 16)]}${
+		colorArray[Math.floor(Math.random() * 16)]
+	}${colorArray[Math.floor(Math.random() * 16)]}${
+		colorArray[Math.floor(Math.random() * 16)]
+	}${colorArray[Math.floor(Math.random() * 16)]}${
+		colorArray[Math.floor(Math.random() * 16)]
+	}`;
+  console.log(hexCode);
+  bgColor.style.backgroundColor = hexCode
+	// if (i === 0) {
+	// 	bgColor.style.backgroundColor = "white";
+	// 	i++;
+	// } else if (i === 1) {
+	// 	bgColor.style.backgroundColor = "red";
+	// 	i++;
+	// } else if (i === 2) {
+	// 	bgColor.style.backgroundColor = "blue";
+	// 	i++;
+	// } else {
+	// 	bgColor.style.backgroundColor = "yellow";
+	// 	i = 0;
+	// }
 });
 
 //Exercise 4
@@ -62,5 +73,5 @@ addLiBtn.addEventListener("click", function () {
   const ul = document.querySelector('ul');
   const newItem = document.createElement('li');
   ul.appendChild(newItem);
-  newItem.textContent = "lorem";
+  newItem.textContent = "Lorem ipsum";
 })
