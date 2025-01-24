@@ -44,3 +44,13 @@ btn.addEventListener("click", function () {
 		i = 0;
 	}
 });
+
+//Exercise 4
+let changePara = document.getElementById('changePara');
+let changePBtn = document.getElementById('changePBtn');
+
+changePBtn.addEventListener("click", function(){
+  
+  changePara.textContent = "Hello!"
+
+})
