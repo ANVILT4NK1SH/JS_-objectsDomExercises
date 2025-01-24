@@ -47,10 +47,20 @@ btn.addEventListener("click", function () {
 
 //Exercise 4
 let changePara = document.getElementById('changePara');
-let changePBtn = document.getElementById('changePBtn');
+const changePBtn = document.getElementById('changePBtn');
 
 changePBtn.addEventListener("click", function(){
   
   changePara.textContent = "Hello!"
 
+})
+
+//Exercise 5
+const addLiBtn = document.getElementById('addLiBtn');
+
+addLiBtn.addEventListener("click", function () {
+  const ul = document.querySelector('ul');
+  const newItem = document.createElement('li');
+  ul.appendChild(newItem);
+  newItem.textContent = "lorem";
 })
