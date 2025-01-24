@@ -19,26 +19,27 @@ const student = {
 		let total = 0;
 
 		for (index = 0; index < this.grades.length; index++) {
-			let currentIndex = grades[index];
+			let currentIndex = this.grades[index];
 			total += currentIndex;
 		}
+    console.log(`Average: ${total/this.grades.length}`)
 	},
 };
+
+student.calculateAverageGrade();
 
 //Exercise 3
 const colorArray = ["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"]
 const btn = document.getElementById("btn");
 const bgColor = document.getElementById("bgColor");
-let i = 1;
-console.log(colorArray[Math.floor(Math.random() * 16)])
+
 btn.addEventListener("click", function () {
-  const hexCode = `#${colorArray[Math.floor(Math.random() * 16)]}${
-		colorArray[Math.floor(Math.random() * 16)]
-	}${colorArray[Math.floor(Math.random() * 16)]}${
-		colorArray[Math.floor(Math.random() * 16)]
-	}${colorArray[Math.floor(Math.random() * 16)]}${
-		colorArray[Math.floor(Math.random() * 16)]
-	}`;
+  let i = 0;
+  let hexCode = `#`;
+  while(i<6){
+    hexCode = hexCode + colorArray[Math.floor(Math.random() * colorArray.length)]
+    i++
+  }
   console.log(hexCode);
   bgColor.style.backgroundColor = hexCode
 	// if (i === 0) {
